@@ -1,0 +1,8 @@
+.env
+private.key
+private*
+test-call.js
+node_modules/
+test-msg.js
+utils/funcs2.js
+log/*
