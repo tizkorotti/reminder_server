@@ -1,0 +1,17 @@
+version: "3"
+services:
+  reminder-server:
+    image: reminder-server:0.3
+    container_name: reminder-server
+    ports:
+    - "8765:8765"
+    command: node app.js
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "5"
+    volumes:
+      - "./.env:/app/.env"
+      - "./log:/var/log"
+    restart: on-failure
